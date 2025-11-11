@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Riverwood AI Voice Agent</title>
+  <style>
+    body { font-family: system-ui, Arial; max-width: 720px; margin: 2rem auto; }
+    .card { border: 1px solid #e5e7eb; padding: 16px; border-radius: 12px; box-shadow: 0 1px 8px rgba(0,0,0,0.05); }
+    button { padding: 10px 16px; border-radius: 10px; border: 1px solid #ddd; cursor: pointer; }
+    button:active { transform: scale(0.98); }
+    #log { white-space: pre-wrap; background: #fafafa; padding: 12px; border-radius: 8px; border: 1px solid #eee; }
+    input { border: 1px solid #ddd; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h2>Miss Riverwood — AI Voice Agent</h2>
+  <p>Friendly, Hinglish, remembers context. Try saying: <i>“Namaste, chai pee li?”</i> or <i>“Kal main site visit gaya tha.”</i></p>
+
+  <div class="card">
+    <h3>🎤 Voice</h3>
+    <button id="recBtn">Start Recording</button>
+    <audio id="audioOut" controls></audio>
+  </div>
+
+  <div class="card" style="margin-top:12px;">
+    <h3>⌨ Text</h3>
+    <input id="textIn" placeholder="Type here..." style="width:80%; padding:8px;" />
+    <button id="sendBtn">Send</button>
+    <audio id="audioOutText" controls></audio>
+  </div>
+
+  <div class="card" style="margin-top:12px;">
+    <h3>🏗 Construction Update (sample)</h3>
+    <button id="updBtn">Get Sample Update</button>
+    <div id="upd"></div>
+  </div>
+
+  <div id="log" style="margin-top:12px;"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
